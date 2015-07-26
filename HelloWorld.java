@@ -1,6 +1,9 @@
+import java.io.Console;
+
 public class HelloWorld {
   public static void main(String[] args) {
+    Console console = System.console();
     String firstName = "Moss";
-    System.out.println("Hello, my name is " + firstName);
+    console.printf("Hello, my name is %s\n", firstName);
   }
 }
