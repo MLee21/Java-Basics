@@ -11,12 +11,14 @@ public class HelloWorld {
     }
     String name = console.readLine("Enter a name: ");
     String adjective = console.readLine("Enter an adjective: ");
-    String noun = console.readLine("Enter a noun: ");
-    if (noun.equalsIgnoreCase("dork") || 
-      noun.equalsIgnoreCase("jerk")) {
-      console.printf("That language is not allowed. Exiting \n\n");
-      System.exit(0);
-    }
+    String noun;
+    do {
+      noun = console.readLine("Enter a noun: ");
+      if (noun.equalsIgnoreCase("dork") || 
+        noun.equalsIgnoreCase("jerk")) {
+        console.printf("That language is not allowed. Try again. \n\n");
+      }
+    } while(noun.equalsIgnoreCase("dork") || noun.equalsIgnoreCase("jerk")); 
     String adverb = console.readLine("Enter an adjective: ");
     String verb = console.readLine("Enter a verb ending in -ing: ");
     console.printf("Your fun short story:\n-------------------\n");
